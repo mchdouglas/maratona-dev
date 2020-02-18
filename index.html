@@ -3,10 +3,18 @@
 
 <head>
     <title>Doe sangue! Doe vida </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
 </head>
 
 <body>
     <header>
+        <img 
+            class="logo"
+            src="logo.png" 
+            alt="imagem de DOE"
+        >
         <h1>DOE</h1>
         <h2>A sua doação importa!</h2>
         <p>A sua doação importa</p>
@@ -16,21 +24,26 @@
         <button>Quero ajudar</button>
     </header>
 
-    <section class="form">
+    <section class="form hide">
         <h2>Entre na lista de doadores</h2>
         <form action="/">
             <input 
+                required="true"
+                autocomplete="off"
                 type="text" 
                 name="name" 
                 placeholder="Nome Completo"
             >
             <input 
                 required="true"
+                autocomplete="off"
                 type="email" 
                 name="email" 
                 placeholder="Email"
             >
-            <input 
+            <input
+                required="true" 
+                autocomplete="off"
                 type="text" 
                 name="blood" 
                 placeholder="Tipo sanguíneo"
@@ -41,7 +54,7 @@
     </section>
 
     <main>
-        <h2>Últimos doadores</h2>
+        <h2>Últimos <span>doadores</span></h2>
 
         <section class="donors">
             <div class="donor">
@@ -64,6 +77,8 @@
     </main>
 
     <footer> Com ❤️ Rocketseat</footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
