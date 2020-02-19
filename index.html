@@ -4,7 +4,7 @@
 <head>
     <title>Doe sangue! Doe vida </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -12,7 +12,7 @@
     <header>
         <img 
             class="logo"
-            src="logo.png" 
+            src="/logo.png" 
             alt="imagem de DOE"
         >
         <h2>A sua doação importa!</h2>
@@ -25,7 +25,7 @@
 
     <section class="form hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="/">
+        <form action="/" method="POST">
             <input 
                 required="true"
                 autocomplete="off"
@@ -56,28 +56,20 @@
         <h2>Últimos <span>doadores</span></h2>
 
         <section class="donors">
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Michael Douglas</p>
-            </div>
-            <div class="donor">
-                <div class="blood">B+</div>
-                <p>Cleiton Souza</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Mayk Brito</p>
-            </div>
-            <div class="donor">
-                <div class="blood">O+</div>
-                <p>Robson Marques</p>
-            </div>
+            
+            {% for donor in donors %}
+
+                <div class="donor">
+                    <div class="blood">{{ donor.blood }}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {%endfor%}
         </section>
     </main>
 
     <footer> Com ❤️ Rocketseat</footer>
 
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
 </body>
 
 </html>
